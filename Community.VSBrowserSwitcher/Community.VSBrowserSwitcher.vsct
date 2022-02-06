@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<Commands package="guidCommunity_VSBrowserSwitcherPkg">
+		<Groups>
+			<Group guid="guidIDEToolbarCmdSet" id="ToolbarGroup" priority="0x0000">
+				<Parent guid="guidIDEToolbarCmdSet" id="Toolbar"/>
+			</Group>
+		</Groups>
+		<Menus> <!-- actuall a toolbar -->
+			<Menu guid="guidIDEToolbarCmdSet" id="Toolbar" type="Toolbar" >
+				<CommandFlag>DefaultDocked</CommandFlag>
+				<Strings>
+					<ButtonText>Browser Switcher</ButtonText>
+					<!-- The CommandName field specifies the text that appears in the keyboard category in the Commands tab in the Customize dialog box (available by clicking Customize on the Tools menu).-->
+					<CommandName>Browser Switcher</CommandName>
+				</Strings>
+			</Menu>
+		</Menus>
+		<Buttons>
+			<Button guid="guidIDEToolbarCmdSet" id="cmdidFirefox" priority="0x0100" type="Button">
+				<Parent guid="guidIDEToolbarCmdSet" id="ToolbarGroup" />
+				<Icon guid="guidImages" id="bmpFirefox" />
+				<Strings>
+					<CommandName>Firefox</CommandName>
+					<ButtonText>Firefox</ButtonText>
+				</Strings>
+			</Button>
+
+			<Button guid="guidIDEToolbarCmdSet" id="cmdidInternetExplorer" priority="0x0200" type="Button">
+				<Parent guid="guidIDEToolbarCmdSet" id="ToolbarGroup" />
+				<Icon guid="guidImages" id="bmpIexplore" />
+				<Strings>
+					<CommandName>Internet Explorer</CommandName>
+					<ButtonText>Internet Explorer</ButtonText>
+				</Strings>
+			</Button>
+
+			<Button guid="guidIDEToolbarCmdSet" id="cmdidChrome" priority="0x0300" type="Button">
+				<Parent guid="guidIDEToolbarCmdSet" id="ToolbarGroup" />
+				<Icon guid="guidImages" id="bmpChrome" />
+				<Strings>
+					<CommandName>Chrome</CommandName>
+					<ButtonText>Chrome</ButtonText>
+				</Strings>
+			</Button>
+
+			<Button guid="guidIDEToolbarCmdSet" id="cmdidSafari" priority="0x0400" type="Button">
+				<Parent guid="guidIDEToolbarCmdSet" id="ToolbarGroup" />
+				<Icon guid="guidImages" id="bmpSafari" />
+				<Strings>
+					<CommandName>Safari</CommandName>
+					<ButtonText>Safari</ButtonText>
+				</Strings>
+			</Button>
+
+			<Button guid="guidIDEToolbarCmdSet" id="cmdidOpera" priority="0x0500" type="Button">
+				<Parent guid="guidIDEToolbarCmdSet" id="ToolbarGroup" />
+				<Icon guid="guidImages" id="bmpOpera" />
+				<Strings>
+					<CommandName>Opera</CommandName>
+					<ButtonText>Opera</ButtonText>
+				</Strings>
+			</Button>
+
+			<Button guid="guidIDEToolbarCmdSet" id="cmdidSpartan" priority="0x0600" type="Button">
+				<Parent guid="guidIDEToolbarCmdSet" id="ToolbarGroup" />
+				<Icon guid="guidImages" id="bmpSpartan" />
+				<Strings>
+					<CommandName>Spartan</CommandName>
+					<ButtonText>Spartan</ButtonText>
+				</Strings>
+			</Button>
+
+		</Buttons>
+
+		<Bitmaps>
+			<Bitmap guid="guidImages" href="Resources\Toolbar.png" usedList="bmpFirefox, bmpIexplore, bmpChrome, bmpSafari, bmpOpera, bmpSpartan"/>
+
+		</Bitmaps>
+
+	</Commands>
+
+	<Symbols>
+		<!-- This is the package guid. -->
+		<GuidSymbol name="guidCommunity_VSBrowserSwitcherPkg" value="{31F6453E-5BC0-412A-B6F4-10B55AB41DEA}" />
+
+		<!-- This is the guid used to group the menu commands together -->
+		<GuidSymbol name="guidIDEToolbarCmdSet" value="{8570C04B-5EC8-453B-BB29-E7E384B840BD}">
+
+			<IDSymbol name="Toolbar" value="0x1000" />
+			<IDSymbol name="ToolbarGroup" value="0x1050" />
+
+			<IDSymbol name="cmdidFirefox"			value="0x0100" />
+			<IDSymbol name="cmdidInternetExplorer"	value="0x0200" />
+			<IDSymbol name="cmdidChrome"			value="0x0300" />
+			<IDSymbol name="cmdidSafari"			value="0x0400" />
+			<IDSymbol name="cmdidOpera"				value="0x0500" />
+			<IDSymbol name="cmdidSpartan"			value="0x0600" />
+
+		</GuidSymbol>
+
+		<GuidSymbol name="guidImages" value="{d20a357b-ee56-401e-97bc-f4e34fcbab7d}" >
+			<IDSymbol name="bmpFirefox" value="1" />
+			<IDSymbol name="bmpIexplore" value="2" />
+			<IDSymbol name="bmpChrome" value="3" />
+			<IDSymbol name="bmpSafari" value="4" />
+			<IDSymbol name="bmpOpera" value="5" />
+			<IDSymbol name="bmpSpartan" value="6" />
+		</GuidSymbol>
+	</Symbols>
+
+</CommandTable>
